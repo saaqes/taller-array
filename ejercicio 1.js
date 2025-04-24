@@ -1,7 +1,5 @@
-// Arreglo para las 5 habitaciones (0 = libre, 1 = ocupada)
 let habitaciones = [0, 0, 0, 0, 0];
 
-// Función para mostrar el estado de las habitaciones
 const mostrarEstado = () => {
   let estado = "Estado de habitaciones:\n";
   for (let i = 0; i < habitaciones.length; i++) {
@@ -10,7 +8,6 @@ const mostrarEstado = () => {
   alert(estado);
 };
 
-// Función para contar cuántas habitaciones están libres
 const contarHabitacionesLibres = () => {
   let libres = 0;
   for (let i = 0; i < habitaciones.length; i++) {
@@ -21,7 +18,6 @@ const contarHabitacionesLibres = () => {
   return libres;
 };
 
-// Función para reservar una habitación
 const reservarHabitacion = (num) => {
   if (num < 1 || num > 5) {
     alert("Número de habitación inválido. Usa 1-5.");
@@ -34,7 +30,6 @@ const reservarHabitacion = (num) => {
   mostrarHabitacionesLibres();
 };
 
-// Función para liberar una habitación
 const liberarHabitacion = (num) => {
   if (num < 1 || num > 5) {
     alert("Número de habitación inválido. Usa 1-5.");
@@ -47,13 +42,11 @@ const liberarHabitacion = (num) => {
   mostrarHabitacionesLibres();
 };
 
-// Función para mostrar cuántas habitaciones están libres
 const mostrarHabitacionesLibres = () => {
   let libres = contarHabitacionesLibres();
   alert(`Habitaciones libres: ${libres}`);
 };
 
-// Menú principal
 while (true) {
   let opcion = prompt("1. Ver estado\n2. Reservar\n3. Liberar\n4. Salir\nElige una opción:");
   if (opcion === "1") {
